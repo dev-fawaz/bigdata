@@ -14,3 +14,4 @@ numerize
 bs4
 requests
 feedparser
+plotly.express
