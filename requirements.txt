@@ -14,4 +14,3 @@ numerize
 bs4
 requests
 feedparser
-sklearn
