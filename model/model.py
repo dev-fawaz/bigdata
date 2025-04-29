@@ -28,7 +28,7 @@ with col:
     
     col1, col2= st.columns([0.5,3])
     with col1:
-        st.image('/bigdata/model/cancer.png')
+        st.image('model/cancer.png')
     with col2:
         st.title(":blue[**Demo Classification du Cancer du Sein**]")
     
@@ -38,11 +38,11 @@ with col:
     with tab1:
         st.title(':orange[Chargement du dataset Breast Cancer Wisconsin]')
         
-        data = pd.read_csv('/bigdata/model/file_set.csv')
+        data = pd.read_csv('model/file_set.csv')
         data_set = data.drop('Unnamed: 0', axis=1)
         data_set
         data_set['diagnosis']=data_set['diagnosis'].map({'B':0,'M':1})
-        model = joblib.load('/bigdata/model/breast_cancer_model.pkl')
+        model = joblib.load('model/breast_cancer_model.pkl')
     
         X = data_set.drop('diagnosis', axis=1)
         y = data_set['diagnosis']
